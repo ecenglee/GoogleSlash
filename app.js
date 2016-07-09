@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var users = require('./routes/api');
 
 var app = express();
 
@@ -56,5 +56,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.listen(3000);
+console.log('Server running at localhost:3000.');
 
 module.exports = app;
