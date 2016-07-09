@@ -23,7 +23,8 @@ exports.display = function(req, res) {
 };
 
 exports.returnSlackResponse = function(req, res) {
-    res.send(req.body);
+    var util = require('util');
+    res.send(util.inspect(req.body,false,null));
 };
 
 var _packageResponse = function(payload) {
