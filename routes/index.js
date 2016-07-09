@@ -8,6 +8,6 @@ router.get('/', function(req, res, next) {
 });
 
 // API Routes
-router.get('/api', searchController.query);
+router.get('/api', searchController.returnSlackResponse);
 
 module.exports = router;

@@ -21,6 +21,11 @@ exports.query = function(req, res) {
 exports.display = function(req, res) {
     res.render('index', {title: 'api'});
 };
+
+exports.returnSlackResponse = function(req, res) {
+    res.send(req.body);
+};
+
 var _packageResponse = function(payload) {
     var util = require('util');
     payload = util.inspect(payload.d.results, false, null);
